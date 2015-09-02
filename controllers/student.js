@@ -5,6 +5,7 @@ var db = require (__dirname+ '/../lib/mysql') //connect
       res.send('Hello World!');
 };*/
 exports.find = function(req,res,next){
+      console.log(req.ip+"find()");
 
       db.query("SELECT * FROM student", function(err,rows){ //2 parameters (sql statement, function to implement)
             if(err) return next (err); //if error, skip route handlers
@@ -14,6 +15,7 @@ exports.find = function(req,res,next){
       
    };
 exports.findOne = function(req,res,next){
+       console.log(req.ip+"findOne()");
 
       db.query("SELECT * FROM student WHERE id=?",[req.params.id], function(err,rows){
             if(err) return next (err);
