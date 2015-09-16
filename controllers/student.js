@@ -29,12 +29,14 @@ exports.findOne = function(req,res,next){
    };
    
 exports.insert = function(req,res,next){
-
+      console.log(req.body+"insert()");
+      
       db.query("INSERT INTO student(studno,name) VALUES (?,?)", [req.body.studno,req.body.name], function(err,rows){
             if(err) return next (err);
             res.send(rows);
             
       });
+      
       
    };
 

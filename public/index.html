@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>  <!--required root element -->
+      <head> <!--important for webcrawlers (search engine results) -->
+            <title> HTML5 Discussion </title>
+            <meta charset = "utf-8"/> <!--required-->
+      </head>
+      
+      <body>
+            
+            <form method = "POST" action = "http://localhost:5000/students">
+            <!--textbox-->
+            <input type = "text" name = "studno" placeholder = "Student Number" pattern = "^[0-9]{4}-[0-9]{5}$" required = ""/> <br/><!--2013-44444-->
+            <input type = "password" name = "name" placeholder = "Name"/> <br/>
+            <input type = "submit" value = "Create"/>
+             <!--<input type = "color" /> <br/>
+            <input type = "email" placeholder = "Email"/> <br/>
+            <input type = "password" placeholder = "Password"/> <br/>
+            <input type = "date" /> <br/>
+            <input type = "number" /> <br/>
+            <input type = "range" /> <br/> -->
+            
+             </form>
+      </body>
+</html>
